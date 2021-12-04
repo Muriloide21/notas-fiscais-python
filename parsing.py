@@ -46,9 +46,9 @@ def parsing_and_saving(file):
         rua = enderDest.find(f'{namespace}xLgr').text
         numero = enderDest.find(f'{namespace}nro').text
         bairro = enderDest.find(f'{namespace}xBairro').text
-        município = enderDest.find(f'{namespace}xMun').text
+        municipio = enderDest.find(f'{namespace}xMun').text
 
-        client_address = rua + ', ' + numero + '. ' + bairro + ', ' + município + '.'
+        client_address = rua + ', ' + numero + '. ' + bairro + ', ' + municipio + '.'
 
         # Inserir na tabela de clientes (cpf/cnpj_cliente, cpf/cnpj_emit, nome, endereco)
         sql2 = 'INSERT INTO CLIENTES (cnpj_or_cpf_client, cnpj_or_cpf_emit, nome, endereco) VALUES (?, ?, ?, ?)'

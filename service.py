@@ -1,8 +1,10 @@
 from flask import Flask
+from flask_wtf.csrf import CSRFProtect
 import parsing
 import sys
 
 app = Flask(__name__)
+csrf = CSRFProtect(app)
 
 file = str(sys.argv[1])
 parsing.parsing_and_saving(file)
