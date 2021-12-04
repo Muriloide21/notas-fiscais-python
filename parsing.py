@@ -42,11 +42,11 @@ def parsing_and_saving(file):
         
         # Nome e Endereço do Cliente
         client_name = dest.find(f'{namespace}xNome').text
-        enderDest = dest.find(f'{namespace}enderDest')
-        rua = enderDest.find(f'{namespace}xLgr').text
-        numero = enderDest.find(f'{namespace}nro').text
-        bairro = enderDest.find(f'{namespace}xBairro').text
-        municipio = enderDest.find(f'{namespace}xMun').text
+        ender_dest = dest.find(f'{namespace}enderDest')
+        rua = ender_dest.find(f'{namespace}xLgr').text
+        numero = ender_dest.find(f'{namespace}nro').text
+        bairro = ender_dest.find(f'{namespace}xBairro').text
+        municipio = ender_dest.find(f'{namespace}xMun').text
 
         client_address = rua + ', ' + numero + '. ' + bairro + ', ' + municipio + '.'
 
